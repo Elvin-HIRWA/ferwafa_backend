@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\KeyController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\SendingKeyController;
@@ -31,6 +32,8 @@ Route::prefix('auth')->group(function () {
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/latest-news', [NewsController::class, 'getNews']);
 
 
 Route::post('/sending-key', [SendingKeyController::class, 'sendingKey'])->middleware(['auth:sanctum', 'ability:Admin']);
