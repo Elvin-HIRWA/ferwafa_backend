@@ -10,4 +10,6 @@ class News extends Model
     use HasFactory;
 
     protected $table = 'News';
+
+    protected $fillable = ['title','caption','description','is_top','image'];
 }

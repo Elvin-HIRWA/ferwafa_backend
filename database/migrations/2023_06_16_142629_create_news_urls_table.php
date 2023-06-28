@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('NewsUrl', function (Blueprint $table) {
             $table->id();
-            $table->string('imamge_url');
+            $table->string('image_url');
             $table->text('image_caption')->nullable();
             $table->unsignedBigInteger('news_id');
             $table->timestamps();

@@ -10,4 +10,6 @@ class NewsUrl extends Model
     use HasFactory;
 
     protected $table = 'NewsUrl';
+
+    protected $fillable = ['image_url','news_id'];
 }
